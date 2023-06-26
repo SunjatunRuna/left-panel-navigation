@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Attach CSS file-->
+    <link rel="stylesheet" href="style.css">
+    <title>Left Panel Navigation</title>
+</head>
+<body>
+    <section>
+        <nav id="left-navigation-bar">
+            <div class="nav-item" onclick="showContent('home')">Home</div>
+            <div class="nav-item" onclick="showContent('contact')">Contact</div>
+            <div class="nav-item" onclick="showContent('information')">Information</div>
+            <div class="nav-item" onclick="showContent('guide')">Guide</div>
+
+        </nav>
+        <aside id="content">
+            <h1>Welcome to the Left Navigation Panel</h1>
+            <p>Select a component from the left panel to view its content.</p>
+        </aside>
+    </section>
+
+    <!--JavaScript-->
+    <script>
+        function showContent(component) {
+          var contentDiv = document.getElementById("content");
+          switch (component) {
+            case "home":
+              contentDiv.innerHTML = "<h1>Home</h1><p>This is the home page content.</p>";
+              break;
+            case "contact":
+              contentDiv.innerHTML = "<h1>Contact</h1><p>This is the contact page content.</p>";
+              break;
+            case "information":
+              contentDiv.innerHTML = "<h1>Information</h1><p>This is the information page content.</p>";
+              break;
+            case "guide":
+              contentDiv.innerHTML = "<h1>Guide</h1><p>This is the guide page content.</p>";
+              break;
+            default:
+              contentDiv.innerHTML = "<h1>Welcome to the Left Panel Navigation</h1><p>Select a component from the left panel to view its content.</p>";
+              break;
+          }
+        }
+      </script>
+</body>
+</html>
